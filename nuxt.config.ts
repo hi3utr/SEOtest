@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
   runtimeConfig: {
     public: {
@@ -115,6 +116,63 @@ export default defineNuxtConfig({
   site: {
     url: 'https://coday-web.sotatek.works/',
     name: 'CODAY WEB',
+  },
+  sitemap: {
+    enabled: true,
+    urls: [
+      {
+        loc: '/',
+        changefreq: 'daily',
+        priority: 1,
+        lastmod: new Date().toISOString(),
+      },
+      // English routes
+      {
+        loc: '/hotels',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      // Korean routes
+      {
+        loc: '/ko',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/ko/hotels',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      // Japanese routes
+      {
+        loc: '/ja',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/ja/hotels',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      // Chinese routes
+      {
+        loc: '/zh',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+      {
+        loc: '/zh/hotels',
+        changefreq: 'daily',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
+    ],
   },
   nitro: {
     routeRules: {
