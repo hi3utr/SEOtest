@@ -13,6 +13,10 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
+          name: 'google-site-verification',
+          content: 'XSZNMyQO-XfcaY9XN_oFih54uri9NKE857rd3Vs34E8',
+        },
+        {
           hid: 'description',
           name: 'description',
           content:
