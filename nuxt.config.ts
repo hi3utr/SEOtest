@@ -122,6 +122,7 @@ export default defineNuxtConfig({
         headers: {
           'X-Robots-Tag': 'index, follow',
         },
+        prerender: true,
       },
     },
   },
