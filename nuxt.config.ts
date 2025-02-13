@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/sitemap',
     '@nuxtjs/i18n',
+    '@nuxtjs/robots',
   ],
   runtimeConfig: {
     public: {
