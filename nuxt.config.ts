@@ -45,7 +45,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@vueuse/nuxt',
     '@nuxt/image',
-    '@nuxtjs/sitemap',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
   ],

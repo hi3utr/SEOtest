@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English URLs -->
+  <url>
+    <loc>https://se-otest.vercel.app/en-US</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://se-otest.vercel.app/en-US"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://se-otest.vercel.app/en-US/auth</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://se-otest.vercel.app/en-US/auth"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Korean URLs -->
+  <url>
+    <loc>https://se-otest.vercel.app/ko-KR</loc>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://se-otest.vercel.app/ko-KR"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Japanese URLs -->
+  <url>
+    <loc>https://se-otest.vercel.app/ja-JP</loc>
+    <xhtml:link rel="alternate" hreflang="ja-JP" href="https://se-otest.vercel.app/ja-JP"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Chinese URLs -->
+  <url>
+    <loc>https://se-otest.vercel.app/zh-CN</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://se-otest.vercel.app/zh-CN"/>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
