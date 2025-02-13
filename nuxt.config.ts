@@ -22,6 +22,11 @@ export default defineNuxtConfig({
           content:
             'Find and book the best hotels worldwide. Get exclusive deals and comfortable stays.',
         },
+        {
+          hid: 'robots',
+          name: 'robots',
+          content: 'index, follow',
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -110,5 +115,14 @@ export default defineNuxtConfig({
   site: {
     url: 'https://coday-web.sotatek.works/',
     name: 'CODAY WEB',
+  },
+  nitro: {
+    routeRules: {
+      '/**': {
+        headers: {
+          'X-Robots-Tag': 'index, follow',
+        },
+      },
+    },
   },
 });
