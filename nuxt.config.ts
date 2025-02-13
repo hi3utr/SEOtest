@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl:
       process.env.NODE_ENV === 'production'
-        ? 'https://coday.com'
+        ? 'https://se-otest.vercel.app/'
         : 'http://localhost:3000',
     locales: [
       {
