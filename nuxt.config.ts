@@ -7,8 +7,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Hotel Booking - Find Your Perfect Stay',
-      titleTemplate: '%s - CODAY',
+      titleTemplate: '%s',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -63,39 +62,39 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'en',
-        iso: 'en-US',
+        iso: 'en',
         name: 'English',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'coday.com'
+            ? 'se-otest.vercel.app'
             : 'localhost:3000',
       },
       {
         code: 'ko',
-        iso: 'ko-KR',
+        iso: 'ko',
         name: '한국어',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'coday.com/kr'
-            : 'localhost:3000/kr',
+            ? 'se-otest.vercel.app/ko'
+            : 'localhost:3000/ko',
       },
       {
         code: 'ja',
-        iso: 'ja-JP',
+        iso: 'ja',
         name: '日本語',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'coday.com/jp'
-            : 'localhost:3000/jp',
+            ? 'se-otest.vercel.app/ja'
+            : 'localhost:3000/ja',
       },
       {
         code: 'zh',
-        iso: 'zh-CN',
+        iso: 'zh-hans',
         name: '中文',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'coday.com/cn'
-            : 'localhost:3000/cn',
+            ? 'se-otest.vercel.app/zh'
+            : 'localhost:3000/zh',
       },
     ],
     differentDomains: false,
@@ -114,8 +113,8 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: 'https://coday-web.sotatek.works/',
-    name: 'CODAY WEB',
+    url: 'https://se-otest.vercel.app/',
+    name: 'WAYNE SEO WEB',
   },
   sitemap: {
     enabled: true,
@@ -125,52 +124,14 @@ export default defineNuxtConfig({
         changefreq: 'daily',
         priority: 1,
         lastmod: new Date().toISOString(),
+        _i18nTransform: true,
       },
-      // English routes
       {
-        loc: '/hotels',
+        loc: '/articles',
         changefreq: 'daily',
         priority: 0.8,
         lastmod: new Date().toISOString(),
-      },
-      // Korean routes
-      {
-        loc: '/ko',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-      },
-      {
-        loc: '/ko/hotels',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-      },
-      // Japanese routes
-      {
-        loc: '/ja',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-      },
-      {
-        loc: '/ja/hotels',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-      },
-      // Chinese routes
-      {
-        loc: '/zh',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-      },
-      {
-        loc: '/zh/hotels',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
+        _i18nTransform: true,
       },
     ],
   },
