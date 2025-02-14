@@ -66,7 +66,7 @@ export default defineNuxtConfig({
         name: 'English',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'se-otest.vercel.app'
+            ? 'https://se-otest.vercel.app'
             : 'localhost:3000',
       },
       {
@@ -75,7 +75,7 @@ export default defineNuxtConfig({
         name: '한국어',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'se-otest.vercel.app/ko'
+            ? 'https://se-otest.vercel.app/ko'
             : 'localhost:3000/ko',
       },
       {
@@ -84,7 +84,7 @@ export default defineNuxtConfig({
         name: '日本語',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'se-otest.vercel.app/ja'
+            ? 'https://se-otest.vercel.app/ja'
             : 'localhost:3000/ja',
       },
       {
@@ -93,7 +93,7 @@ export default defineNuxtConfig({
         name: '中文',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'se-otest.vercel.app/zh'
+            ? 'https://se-otest.vercel.app/zh'
             : 'localhost:3000/zh',
       },
     ],
