@@ -71,7 +71,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl:
       process.env.NODE_ENV === 'production'
-        ? 'https://coday-web.sotatek.works'
+        ? 'https://se-otest.vercel.app'
         : 'http://localhost:3000',
     locales: [
       {
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
         file: 'en.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://coday-web.sotatek.works'
+            ? 'https://se-otest.vercel.app'
             : 'http://localhost:3000',
       },
       {
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
         file: 'ko.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://coday-web.sotatek.works/ko'
+            ? 'https://se-otest.vercel.app/ko'
             : 'http://localhost:3000/ko',
       },
       {
@@ -101,7 +101,7 @@ export default defineNuxtConfig({
         file: 'ja.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://coday-web.sotatek.works/ja'
+            ? 'https://se-otest.vercel.app/ja'
             : 'http://localhost:3000/ja',
       },
       {
@@ -111,7 +111,7 @@ export default defineNuxtConfig({
         file: 'zh.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://coday-web.sotatek.works/zh'
+            ? 'https://se-otest.vercel.app/zh'
             : 'http://localhost:3000/zh',
       },
     ],
@@ -127,11 +127,11 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      allowedHosts: ['coday-web.sotatek.works', 'localhost'],
+      allowedHosts: ['se-otest.vercel.app', 'localhost'],
     },
   },
   site: {
-    url: 'https://coday-web.sotatek.works/',
+    url: 'https://se-otest.vercel.app/',
     name: 'CODAY WEB',
   },
   sitemap: {
