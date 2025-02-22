@@ -12,10 +12,6 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
-          name: 'google-site-verification',
-          content: 'XSZNMyQO-XfcaY9XN_oFih54uri9NKE857rd3Vs34E8',
-        },
-        {
           hid: 'description',
           name: 'description',
           content:
@@ -31,7 +27,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap',
         },
       ],
       htmlAttrs: {
@@ -39,6 +35,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ['@/assets/styles/main.css'],
   modules: [
     '@pinia/nuxt',
     '@nuxt/ui',
@@ -47,54 +44,75 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          'Noto Sans TC': true,
+          'Cormorant Garamond': true,
+          'Noto Serif TC': true,
+        },
+      },
+    ],
   ],
   runtimeConfig: {
     public: {
       apiHost: '',
+      firebaseApiKey: '',
+      firebaseAuthDomain: '',
+      firebaseProjectId: '',
+      firebaseStorageBucket: '',
+      firebaseMessagingSenderId: '',
+      firebaseAppId: '',
+      firebaseMeasurementId: '',
     },
   },
   plugins: ['~/plugins/axios'],
   i18n: {
     baseUrl:
       process.env.NODE_ENV === 'production'
-        ? 'https://se-otest.vercel.app/'
+        ? 'https://coday-web.sotatek.works'
         : 'http://localhost:3000',
     locales: [
       {
         code: 'en',
         iso: 'en',
         name: 'English',
+        file: 'en.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://se-otest.vercel.app'
-            : 'localhost:3000',
+            ? 'https://coday-web.sotatek.works'
+            : 'http://localhost:3000',
       },
       {
         code: 'ko',
         iso: 'ko',
         name: '한국어',
+        file: 'ko.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://se-otest.vercel.app/ko'
-            : 'localhost:3000/ko',
+            ? 'https://coday-web.sotatek.works/ko'
+            : 'http://localhost:3000/ko',
       },
       {
         code: 'ja',
         iso: 'ja',
         name: '日本語',
+        file: 'ja.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://se-otest.vercel.app/ja'
-            : 'localhost:3000/ja',
+            ? 'https://coday-web.sotatek.works/ja'
+            : 'http://localhost:3000/ja',
       },
       {
         code: 'zh',
         iso: 'zh-hans',
         name: '中文',
+        file: 'zh.json',
         domain:
           process.env.NODE_ENV === 'production'
-            ? 'https://se-otest.vercel.app/zh'
-            : 'localhost:3000/zh',
+            ? 'https://coday-web.sotatek.works/zh'
+            : 'http://localhost:3000/zh',
       },
     ],
     differentDomains: false,
@@ -113,27 +131,27 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: 'https://se-otest.vercel.app/',
-    name: 'WAYNE SEO WEB',
+    url: 'https://coday-web.sotatek.works/',
+    name: 'CODAY WEB',
   },
   sitemap: {
     enabled: true,
-    urls: [
-      {
-        loc: '/',
-        changefreq: 'daily',
-        priority: 1,
-        lastmod: new Date().toISOString(),
-        _i18nTransform: true,
-      },
-      {
-        loc: '/articles',
-        changefreq: 'daily',
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-        _i18nTransform: true,
-      },
-    ],
+    // urls: [
+    //   {
+    //     loc: '/',
+    //     changefreq: 'daily',
+    //     priority: 1,
+    //     lastmod: new Date().toISOString(),
+    //     _i18nTransform: true,
+    //   },
+    //   {
+    //     loc: '/articles',
+    //     changefreq: 'daily',
+    //     priority: 0.8,
+    //     lastmod: new Date().toISOString(),
+    //     _i18nTransform: true,
+    //   },
+    // ],
   },
   nitro: {
     routeRules: {

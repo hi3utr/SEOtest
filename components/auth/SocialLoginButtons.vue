@@ -5,7 +5,7 @@
       variant="outline"
       class="justify-start px-4"
       size="lg"
-      @click="$emit('social-login', 'google')"
+      @click="$emit('social-login', SOCIAL_MEDIA.GOOGLE)"
     >
       <div class="flex items-center w-full">
         <img
@@ -24,7 +24,7 @@
       variant="outline"
       class="justify-start px-4"
       size="lg"
-      @click="$emit('social-login', 'facebook')"
+      @click="$emit('social-login', SOCIAL_MEDIA.FACEBOOK)"
     >
       <div class="flex items-center w-full">
         <img
@@ -43,7 +43,7 @@
       variant="outline"
       class="justify-start px-4"
       size="lg"
-      @click="$emit('social-login', 'apple')"
+      @click="$emit('social-login', SOCIAL_MEDIA.APPLE)"
     >
       <div class="flex items-center w-full">
         <img src="/assets/images/icons/apple.svg" alt="Apple" class="h-5" />
@@ -54,7 +54,10 @@
 </template>
 
 <script setup lang="ts">
+import { SOCIAL_MEDIA } from '@/constants/common';
+
+type SocialMediaProvider = (typeof SOCIAL_MEDIA)[keyof typeof SOCIAL_MEDIA];
 defineEmits<{
-  "social-login": [provider: "google" | "facebook" | "apple"];
+  'social-login': [provider: SocialMediaProvider];
 }>();
 </script>

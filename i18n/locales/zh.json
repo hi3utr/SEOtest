@@ -1,0 +1,41 @@
+{
+  "welcome": "Welcome",
+  "hotel_booking": "Hotel Booking",
+  "meta": {
+    "title": "Coday - 預約全球美的體驗，探索熱門預約、熱門服務、美業、生活服務、美食、文化體驗 - Coday",
+    "description": "Coday 全球預約平台，集結全球「美的事物」，讓你輕鬆預約美業、汽車美容、生活服務、美食、文化體驗等各國多元服務，不論是放鬆身心、寵愛自己、便利生活，還是探索當地特色，都能在Coday上輕鬆預約，探索更美好的生活方式！"
+  },
+  "navigation": {
+    "eventZone": "活动区",
+    "destination": "目的地",
+    "articleZone": "文章区"
+  },
+  "validateMsg": {
+    "auth": {
+      "emailIsRequired": "Email is required",
+      "emailIsInvalid": "Email is invalid",
+      "maxLengthEmail": "Email address must not exceed 254 characters",
+      "firstNameRequire": "First name is required",
+      "alphabetOnly": "Please enter a valid first name (Alphabet only)",
+      "maxLengthFistName": "Please enter a valid first name (Max 50 characters and Alphabet only)",
+      "lastNameRequire": "Last name is required",
+      "maxLengthLastName": "Please enter a valid first name (Max 50 characters and Alphabet only)"
+    }
+  },
+  "homepage": {
+    "banner": "你对日本还有什么不了解的？",
+    "faq": "常見問題",
+    "enhanceExperience": "昇華你的行程體驗",
+    "articles": "文章分享",
+    "featuredTopics": "Coday Featured Topics",
+    "popularAttractions": "Coday Popular Attractions",
+    "popularBookings": "Coday 熱門預約行程"
+  },
+  "footer": {
+    "aboutUs": "關於我們",
+    "termsAndConditions": "條款與條件",
+    "privacyPolicy": "隱私權政策",
+    "partnership": "合作夥伴關係",
+    "becomeMerchant": "成為我們的商家"
+  }
+}

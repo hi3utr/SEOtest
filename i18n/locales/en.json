@@ -1,0 +1,46 @@
+{
+  "welcome": "Welcome",
+  "hotel_booking": "Hotel Booking",
+  "meta": {
+    "title": "Coday - Reservate Beauty & Lifestyle Services Worldwide | Easy & Convenient Reservations - Coday",
+    "description": "Coday is a global booking platform that makes it easy to reserve beauty treatments, car services, lifestyle needs, dining, and cultural experiences. Whether you want to relax, treat yourself, or explore something new, Coday helps you book the perfect service anytime, anywhere!"
+  },
+  "navigation": {
+    "eventZone": "Event Zone",
+    "destination": "Destination",
+    "articleZone": "Article Zone"
+  },
+  "validateMsg": {
+    "auth": {
+      "emailIsRequired": "Email is required",
+      "emailIsInvalid": "Email is invalid",
+      "maxLengthEmail": "Email address must not exceed 254 characters",
+      "firstNameRequire": "First name is required",
+      "alphabetOnly": "Please enter a valid first name (Alphabet only)",
+      "maxLengthFistName": "Please enter a valid first name (Max 50 characters and Alphabet only)",
+      "lastNameRequire": "Last name is required",
+      "maxLengthLastName": "Please enter a valid first name (Max 50 characters and Alphabet only)"
+    }
+  },
+  "header": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register"
+  },
+  "homepage": {
+    "banner": "What else do you not know about Japan? ",
+    "faq": "Frequently Asked Questions",
+    "enhanceExperience": "Enhance your travel experience",
+    "articles": "Article Sharing",
+    "featuredTopics": "Coday Featured Topics",
+    "popularAttractions": "Coday Popular Attractions",
+    "popularBookings": "Coday Popular Bookings"
+  },
+  "footer": {
+    "aboutUs": "About Us",
+    "termsAndConditions": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "partnership": "Partnership",
+    "becomeMerchant": "Become our Merchant"
+  }
+}

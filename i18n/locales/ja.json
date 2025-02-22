@@ -1,0 +1,41 @@
+{
+  "welcome": "ようこそ",
+  "hotel_booking": "ホテル予約",
+  "meta": {
+    "title": "Coday - 世界中の美容＆ライフサービスを簡単予約｜人気の体験を楽しもう！- Coday",
+    "description": "Codayは、世界中のビューティーやライフサービスを簡単に予約できるプラットフォームです。美容ケア、車のメンテナンス、便利なサービス、グルメ、文化体験など、気になる体験を手軽に予約！リラックスしたい時や新しいことにチャレンジしたい時、Codayであなたにぴったりのサービスを見つけよう！"
+  },
+  "navigation": {
+    "eventZone": "イベントゾーン",
+    "destination": "目的地",
+    "articleZone": "記事ゾーン"
+  },
+  "validateMsg": {
+    "auth": {
+      "emailIsRequired": "Email is required",
+      "emailIsInvalid": "Email is invalid",
+      "maxLengthEmail": "Email address must not exceed 254 characters",
+      "firstNameRequire": "First name is required",
+      "alphabetOnly": "Please enter a valid first name (Alphabet only)",
+      "maxLengthFistName": "Please enter a valid first name (Max 50 characters and Alphabet only)",
+      "lastNameRequire": "Last name is required",
+      "maxLengthLastName": "Please enter a valid first name (Max 50 characters and Alphabet only)"
+    }
+  },
+  "homepage": {
+    "banner": "日本についてまだ知らないことは何ですか？",
+    "faq": "よくある質問",
+    "enhanceExperience": "旅行体験を向上させる",
+    "articles": "記事共有",
+    "featuredTopics": "Coday 特集トピック",
+    "popularAttractions": "Coday 人気の観光地",
+    "popularBookings": "Coday 人気の予約行程"
+  },
+  "footer": {
+    "aboutUs": "私たちに関しては",
+    "termsAndConditions": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "partnership": "パートナーシップ",
+    "becomeMerchant": "私たちの商人になる"
+  }
+}

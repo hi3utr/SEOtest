@@ -1,60 +1,77 @@
 <template>
-  <header class="py-4 bg-[#ABBDDC]">
-    <div>
+  <header class="absolute top-4 left-0 right-0 z-10 bg-transparent">
+    <div class="w-full mx-auto px-12">
       <nav class="flex items-center justify-between w-full">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center">
-          <span class="text-2xl font-[500] text-white">CODAY</span>
-        </NuxtLink>
+        <div class="md:flex flex items-center">
+          <NuxtLink to="/" class="flex items-center">
+            <img :src="LogoWhite" alt="Logo" title="Logo" />
+          </NuxtLink>
+        </div>
 
-        <!-- Desktop Right Side -->
-        <div class="hidden md:flex items-center space-x-4">
+        <!-- Centered Navigation Links -->
+        <div class="hidden md:flex items-center gap-1 space-x-4 mx-auto">
           <NuxtLink
             v-for="item in navigationItems"
             :key="item.path"
             :to="item.path"
-            class="text-white hover:text-[#38bdf8] transition-colors"
+            class="text-white font-medium text-[16px] transition-colors"
           >
-            {{ item.name }}
+            {{ $t(item.name) }}
           </NuxtLink>
-          <div class="flex items-center space-x-2">
-            <img
-              src="@/assets/images/icons/chinese-logo.svg"
-              alt="Chinese Logo"
-            />
-          </div>
+        </div>
+
+        <!-- Desktop Right Side -->
+        <div class="hidden md:flex items-center">
           <LanguageSwitcher />
+
           <USelect
             v-model="selectedCurrency"
             :options="currencies"
-            class="w-24"
+            class="w-18 text-white"
             variant="none"
             color="white"
           />
-          <BaseButton
-            variant="link"
-            color="white"
-            class="text-white"
-            @click="navigateTo('/auth')"
-          >
-            Login
-          </BaseButton>
-          <BaseButton variant="solid" @click="navigateTo('/auth')">
-            Create account
-          </BaseButton>
+          <template v-if="!user">
+            <BaseButton
+              size="md"
+              :label="t('header.login')"
+              class="w-[90px]"
+              color="blue-light"
+              @click="navigateTo(`/${locale}/auth`)"
+            />
+            <BaseButton
+              size="md"
+              :label="t('header.register')"
+              class="w-[90px]"
+              variant="outline"
+              color="blue-light"
+              @click="navigateTo(`/${locale}/auth`)"
+            />
+          </template>
+          <template v-if="user">
+            <div class="flex gap-2">
+              <p class="text-white my-auto">{{ user.email }}</p>
+              <BaseButton
+                size="md"
+                label="Logout"
+                color="blue-light"
+                @click="navigateTo(`/${locale}/auth`)"
+              />
+            </div>
+          </template>
         </div>
 
         <!-- Mobile Menu Button -->
-        <UButton
-          variant="ghost"
-          color="white"
-          class="md:hidden"
-          @click="isMenuOpen = !isMenuOpen"
+
+        <div
+          class="md:hidden text-white bg-transparent cursor-pointer"
+          @click="navigateTo('/auth')"
         >
           <UIcon
             :name="isMenuOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'"
           />
-        </UButton>
+        </div>
       </nav>
 
       <!-- Mobile Menu -->
@@ -70,29 +87,27 @@
             class="hover:text-[#38bdf8] transition-colors py-2"
             @click="isMenuOpen = false"
           >
-            {{ item.name }}
+            {{ $t(item.name) }}
           </NuxtLink>
 
           <div class="space-y-3">
-            <USelect
-              v-model="selectedLanguage"
-              :options="languages"
-              icon="i-heroicons-globe-alt"
-            />
-            <USelect v-model="selectedCurrency" :options="currencies" />
+            <LanguageSwitcher />
           </div>
 
           <div class="flex flex-col space-y-2 pt-2">
-            <UButton
-              variant="outline"
-              color="gray"
+            <BaseButton
+              size="md"
+              :label="t('header.login')"
+              color="blue-light"
               @click="navigateTo('/auth')"
-            >
-              Login
-            </UButton>
-            <UButton color="primary" @click="navigateTo('/auth')">
-              Create account
-            </UButton>
+            />
+            <BaseButton
+              size="md"
+              :label="t('header.register')"
+              variant="outline"
+              color="blue-light"
+              @click="navigateTo('/auth')"
+            />
           </div>
         </div>
       </UCard>
@@ -101,22 +116,19 @@
 </template>
 
 <script setup lang="ts">
-import BaseButton from '@/components/BaseButton.vue';
+import { useI18n } from 'vue-i18n';
+import LogoWhite from '@/assets/images/logo-white.png';
+import BaseButton from '@/components/ui/button/BaseButton.vue';
+import { useUser } from '@/composables/useUser';
 
+const { t, locale } = useI18n();
 const isMenuOpen = ref(false);
-const selectedLanguage = ref('en');
 const selectedCurrency = ref('USD');
-
+const { user } = useUser();
 const navigationItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Event Zone', path: '/event' },
-  { name: 'Destination', path: '/destination' },
-  { name: 'Article Zone', path: '/article' },
-];
-
-const languages = [
-  { label: 'EN', value: 'en' },
-  { label: '中文', value: 'zh' },
+  { name: 'navigation.eventZone', path: '/event' },
+  { name: 'navigation.destination', path: '/destination' },
+  { name: 'navigation.articleZone', path: '/article' },
 ];
 
 const currencies = [

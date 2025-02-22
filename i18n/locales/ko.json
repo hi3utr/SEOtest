@@ -1,0 +1,41 @@
+{
+  "welcome": "환영합니다",
+  "hotel_booking": "호텔 예약",
+  "meta": {
+    "title": "Coday - 전 세계 뷰티 & 라이프 서비스 간편 예약｜쉽고 빠르게 이용하세요! - Coday",
+    "description": "Coday는 뷰티, 자동차 케어, 생활 편의 서비스, 맛집, 문화 체험까지 다양한 서비스를 쉽게 예약할 수 있는 플랫폼입니다. 힐링이 필요할 때, 스스로를 위한 작은 선물, 새로운 경험을 찾을 때, Coday에서 간편하게 예약하고 즐겨보세요!"
+  },
+  "navigation": {
+    "eventZone": "이벤트 존",
+    "destination": "목적지",
+    "articleZone": "기사 존"
+  },
+  "validateMsg": {
+    "auth": {
+      "emailIsRequired": "Email is required",
+      "emailIsInvalid": "Email is invalid",
+      "maxLengthEmail": "Email address must not exceed 254 characters",
+      "firstNameRequire": "First name is required",
+      "alphabetOnly": "Please enter a valid first name (Alphabet only)",
+      "maxLengthFistName": "Please enter a valid first name (Max 50 characters and Alphabet only)",
+      "lastNameRequire": "Last name is required",
+      "maxLengthLastName": "Please enter a valid first name (Max 50 characters and Alphabet only)"
+    }
+  },
+  "homepage": {
+    "banner": "일본에 대해 아직 모르는 것이 무엇입니까?",
+    "faq": "자주 묻는 질문",
+    "enhanceExperience": "여행 경험을 향상시키십시오",
+    "articles": "기사 공유",
+    "featuredTopics": "Coday 추천 주제",
+    "popularAttractions": "Coday 인기 명소",
+    "popularBookings": "Coday 인기 예약 일정"
+  },
+  "footer": {
+    "aboutUs": "회사 소개",
+    "termsAndConditions": "이용 약관",
+    "privacyPolicy": "개인 정보 보호 정책",
+    "partnership": "파트너십",
+    "becomeMerchant": "우리의 상인이 되십시오"
+  }
+}
